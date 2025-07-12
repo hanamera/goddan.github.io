@@ -1,6 +1,6 @@
 /* 画面が768px以下ならこのCSSを適用（スマホ） */
 @charset "UTF-8";
-@media screen and (min-aspect-ratio: 16.5/9), screen and (max-aspect-ratio: 9/16.5) ,and (min-width: 768px)  {
+@media screen and (max-width: 768px) {
 
 @import url(http://fonts.googleapis.com/css?family=Parisienne);
 
