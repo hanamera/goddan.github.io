@@ -1,0 +1,508 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Parisienne);
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: #F5F5F5;
+  text-decoration: none;
+  }
+
+img{
+  object-fit: cover;
+}
+
+
+
+body > header{
+    z-index: 100;
+    position: fixed;
+    top: 0px;
+    left: 0%;
+    transform: translate(0%, 0%);
+    width: 100%;
+    background-color: white;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-weight:700;
+    margin-bottom: auto;
+    }
+
+
+body > header .icon{
+padding-left:60px;
+
+}
+
+body > header .icon a{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  color: black;
+  white-space: nowrap;
+  overflow: visible;
+  font-size: 30pt;
+}
+
+body > header .icon img {
+  display: block;
+  width:60px;
+  aspect-ratio: 1/1;
+}
+
+body > header nav {
+  margin-left: auto;
+  padding-right: 5%;
+  width: 50%;
+  }
+
+body > header nav ul {
+  display: flex;
+  justify-content: space-between;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  font-size: 22px;
+  list-style: none;
+}
+
+body > header nav ul li {
+  flex: 1;
+  text-align: center;
+}
+
+body > header nav ul li a {
+  display: block;
+  width: 100%;
+  color: #000;
+  text-decoration: none;
+  padding: 28px 0px 35px 0px;
+  background-color:white;
+  cursor: pointer;
+  transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+  white-space: nowrap;
+}
+
+body > header nav ul li a:hover{
+  background: #3c4dcb;
+  color:white ;
+  text-decoration: none;
+}
+
+
+
+main header .snap{
+  position: absolute;
+  left: 50%;
+  width: 450px;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  animation: fadeIn 0.5s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+  animation-fill-mode: both;
+}
+
+main header .snap:nth-child(1){
+top: 85px;
+transform: translateX(-100%);
+animation-delay: 0.3s;
+}
+
+
+main header .snap:nth-child(2){
+top: 85px;
+transform: translateX(-0.1%);
+animation-delay: 0.4s;
+}
+
+main header .snap:nth-child(3){
+top: 338px;
+transform: translateX(-100%);
+animation-delay: 0.5s;
+}
+
+main header .snap:nth-child(4){
+top: 338px;
+transform: translateX(-0.1%);
+margin-bottom: 650px;
+animation-delay: 0.6s;
+}
+
+main header .margin{
+  height: 650px; 
+}
+
+main > h1{
+    width: 100%;
+    text-align: center;
+    font-weight:700;
+    padding-top: 130px;
+    padding-bottom: 60px;
+    margin-bottom: 0px;
+font-size: 48px;
+background-color: #333399;
+color: #F5F5F5;
+}
+
+main .fade-in{
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+main .fade-in.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+  h2{
+  width: 68%;
+  margin: 0 auto;
+  font-size: 24px;
+  line-height: 1.6;
+    margin-bottom: 30px;
+  text-align: left;
+  padding-top: 50px;
+  padding-bottom: 10px;
+  position: relative;    /* ↓下のafter線の基準にする */
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -1%;
+  width: 30%;             /* ← 15%〜35% の間に線を引く */
+  border-bottom: 4px solid #333399;
+  padding-bottom: 0px;
+
+    transform-origin: right top;
+  transform: scale(0, 1);
+  transition: transform .3s;
+  transition-delay: 0.5s;
+}
+
+h2.active::after{
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+main p{
+  width: 70%;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.6;
+  padding-bottom: 30px;
+  }
+
+
+main >.fade-in> ul {
+  list-style: none;
+  margin-left: 20%;
+  line-height: 2.5;
+  font-size: 20px;
+  width: 60%;
+  padding-left: 3rem; /* ⬅️ インデント */
+  position: relative;
+}
+
+main>.fade-in> ul li::before {
+  content: "●";
+  color: #333399;
+  font-size: 20px;
+    position: absolute;
+  left: 0; /* liの左端に配置 */
+  
+
+}
+
+main  .icon {
+width: 30%;
+    margin-left: 35%;
+    align-items: center;
+    margin-top: 20px;
+    padding-bottom: 0px;
+}
+
+main  .icon ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+main  .icon ul li {
+  width: 100%;
+  flex: 1;
+  text-align: center;
+  list-style: none;
+  display: flex;
+}
+
+main .icon ul li a {
+  display: block;
+  width: 100%;
+  color: white;  /* ← aに付ける */
+  text-decoration: none;
+  cursor: pointer;
+  transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+  padding-bottom: 5px;
+  position: relative;
+  
+}
+
+main  .icon img{
+  width: 50px;
+}
+
+
+  .video-player{
+  display: flex;
+  flex-wrap: wrap;
+  }
+
+#js-player-1,
+#js-player-2
+{
+  width: 28%;   
+  aspect-ratio: 16/9;
+}
+
+#js-player-1{
+  margin-left: 20%;
+}
+
+#js-player-2{
+  margin-left: 4%;
+}
+
+ .no1,
+ .no2{
+aspect-ratio: 16 / 9; 
+width: 28%; 
+height: auto; 
+}
+
+ .no1{
+  padding-left: 20%;
+}
+
+.no2{
+  padding-left: 4%;
+}
+
+
+.faq ul li {
+  position: relative; 
+  font-size: 20px;
+  line-height: 1.6;
+  padding-top: 40px;
+  margin-left: 18%;
+  padding-left: 40px;
+  padding-bottom: 5px;
+  max-width:60%;
+  list-style: none;
+}
+
+.faq ul li:nth-child(2n-1){
+  margin-bottom: 45px;
+}
+
+.faq ul li:nth-child(2n){
+  margin-bottom: 100px;
+}
+
+.faq ul li:nth-child(2n-1)::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -0.5%;
+  width: 60%;             /* ← 15%〜35% の間に線を引く */
+  border-bottom: 2px solid rgb(0 0 0 / 50%);
+  border-radius: 2px;
+  padding-top: 100px;
+
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: transform .3s;
+  transition-delay: 0.6s;
+}
+
+.faq.active ul li:nth-child(2n-1)::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -3%;
+  width: 80%;             /* ← 15%〜35% の間に線を引く */
+  border-bottom: 2px solid rgb(0 0 0 / 50%);
+  border-radius: 2px;
+  padding-top: 100px;
+
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+.faq ul li::before{
+  position: absolute;
+  top: 0px;
+  line-height: 1;
+  font-family:Parisienne, cursive;
+  color: rgba(0, 6, 192, 0.5);
+  font-size:100px; 
+  
+}
+
+.faq ul li:nth-child(2n-1)::before{
+  left: -50px;
+  content: "Q";
+  color: rgb(0 0 0 / 50%);
+}
+
+
+
+.faq ul li:nth-child(2n)::before{
+  left: -80px;
+  content: "A";
+  color: rgba(rgb(13, 0, 255), 0.4);
+}
+
+p.e-mail{
+  text-align: center; 
+  font-weight: 700; 
+  font-size: 32px;
+}
+
+
+
+
+
+footer{
+background-color: #333399;
+    margin-top: 120px;
+    padding-top: 60px;
+    padding-bottom: 0px;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+footer > nav{
+    width: 60%;
+    margin-left: 20%;
+    align-items: center;
+}
+
+footer  ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  width: 100%;
+  flex: 1;
+  text-align: center;
+  list-style: none;
+  display: flex;
+}
+
+footer > nav ul li:not(:last-child) {
+  border-right: 1px solid #F5F5F5;
+}
+
+footer > nav ul li:nth-child(4) {
+  margin-right: 10px;
+}
+
+
+footer ul li a {
+  display: block;
+  width: 100%;
+  color: white;  /* ← aに付ける */
+  text-decoration: none;
+  cursor: pointer;
+  transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+  padding-bottom: 5px;
+  position: relative;
+  white-space: nowrap;
+  
+}
+
+footer > nav ul li a::before {
+  background: white;
+  content: '';
+  width: 55%;
+  height: 1.5px;
+  position: absolute;
+  left: 22.5%;
+  bottom: 0;
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: transform .5s;
+}
+
+footer > nav ul li a:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+footer .icon {
+  text-align: center;
+  margin-top: 20px;
+}
+
+footer .icon a{
+  position: static; 
+  margin: 50px auto 0 auto;
+  text-align: center;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: white;
+  white-space: nowrap;
+  overflow: visible;
+  font-size: 20pt;
+  padding-bottom: 10px;
+  display: inline-flex;
+  justify-content: center;
+}
+
+footer .icon img {
+  display: block;
+  height:40px;
+}
+
+footer > .links{
+    width: 30%;
+    margin-left: 35%;
+    align-items: center;
+    margin-top: 20px;
+    padding-bottom: 40px;
+}
+
+footer > .links img{
+  width: 30px;
+}
+
+footer p{
+  text-align: center;
+  color:#F5F5F5;
+}
+
+
+/* ここまでがPC版 */
+
+
+
+
